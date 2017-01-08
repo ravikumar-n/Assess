@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:padding="@dimen/padding_normal"
+    >
+
+  <ImageView
+      android:id="@+id/repo_provider_imageview"
+      android:layout_width="@dimen/avatar_size"
+      android:layout_height="@dimen/avatar_size"
+      android:layout_gravity="center_vertical"
+      android:scaleType="fitXY"
+      android:src="@drawable/ic_circular_bitbucket"
+      />
+
+  <TextView
+      android:id="@+id/repo_name_textview"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/keyline_1"
+      android:layout_marginRight="72dp"
+      android:maxLines="2"
+      android:text="@string/list_item_title"
+      android:textAppearance="@style/PrimaryTextAppearance"
+      />
+
+  <ImageView
+      android:id="@+id/repo_visibility_imageview"
+      android:layout_width="24dp"
+      android:layout_height="24dp"
+      android:layout_gravity="right"
+      app:srcCompat="@drawable/ic_lock_24dp"
+      />
+
+  <android.support.percent.PercentFrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/keyline_1"
+      android:layout_marginTop="@dimen/spacing_medium"
+      android:paddingTop="@dimen/spacing_small"
+      >
+
+    <TextView
+        android:id="@+id/repo_language_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:maxEms="24"
+        android:maxLines="1"
+        android:text="@string/android"
+        android:textAppearance="@style/SecondaryTextAppearance"
+        app:layout_widthPercent="40%"
+        tools:text="@string/placeholder_lorem"
+        />
+
+    <TextView
+        android:id="@+id/pr_count_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_pull_request"
+        android:drawablePadding="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/pr_count_text"
+        android:textAppearance="@style/AppTheme.TextAppearance.RobotoMedium"
+        android:textColor="@color/primary_light"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_marginLeftPercent="45%"
+        app:layout_widthPercent="20%"
+        />
+
+    <TextView
+        android:id="@+id/repo_last_updated_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:maxLines="1"
+        android:text="@string/time"
+        android:textAppearance="@style/SecondaryTextAppearance"
+        app:layout_marginLeftPercent="70%"
+        app:layout_widthPercent="30%"
+        />
+  </android.support.percent.PercentFrameLayout>
+</android.support.percent.PercentFrameLayout>

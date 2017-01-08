@@ -1,0 +1,17 @@
+<resources>
+  <string name="app_name">Assess</string>
+  <string name="list_item_title">keepworks/omnicode</string>
+
+  <string name="font_fontFamily_medium">sans-serif-medium</string>
+  <string name="placeholder_lorem">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean     commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient     montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,     sem. Nulla consequat massa quis enim. Donec.</string>
+  <string name="time">2 days ago</string>
+  <string name="pr_count_text">#12</string>
+  <string name="android">Android</string>
+  <string name="inflate_framelayout">Inflate FrameLayout</string>
+  <string name="inflate_linearlayout">Inflate LinearLayout</string>
+  <string name="inflate_relativelayout">Inflate RelativeLayout</string>
+  <string name="inflate_percentrelativelayout">Inflate PercentRelativeLayout</string>
+  <string name="inflate_percentframelayout">Inflate PercentFrameLayout</string>
+  <string name="inflate_constraintlayout">Inflate ConstraintLayout</string>
+  <string name="assess_all_layouts">Assess All Layouts</string>
+</resources>

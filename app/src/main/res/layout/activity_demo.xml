@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_normal"
+    android:paddingRight="@dimen/padding_normal"
+    >
+  <Button
+      android:id="@+id/inflate_framelayout_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/inflate_framelayout"
+      />
+
+  <Button
+      android:id="@+id/inflate_linearlayout_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/inflate_linearlayout"
+      />
+
+  <Button
+      android:id="@+id/inflate_relativelayout_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/inflate_relativelayout"
+      />
+
+  <Button
+      android:id="@+id/inflate_percentframelayout_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/inflate_percentframelayout"
+      />
+
+  <Button
+      android:id="@+id/inflate_percent_relativelayout_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/inflate_percentrelativelayout"
+      />
+
+  <Button
+      android:id="@+id/inflate_constraintlayout_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/inflate_constraintlayout"
+      />
+
+  <Button
+      android:id="@+id/assess_all_layouts_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/assess_all_layouts"
+      />
+
+  <TextView
+      android:id="@+id/result_textview"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:maxLines="7"
+      android:textAppearance="@style/PrimaryTextAppearance"
+      android:textColor="@color/colorAccent"
+      tools:text="@string/placeholder_lorem"
+      />
+
+  <FrameLayout
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:layout_marginTop="@dimen/spacing_medium"
+      android:background="#F5F5F5"
+      />
+</LinearLayout>
+

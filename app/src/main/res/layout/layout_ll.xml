@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_normal"
+    >
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_circular_bitbucket"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/spacing_small"
+      android:orientation="vertical"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+      <TextView
+          android:id="@+id/repo_name_textview"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.9"
+          android:maxLines="2"
+          android:text="@string/list_item_title"
+          android:textAppearance="@style/PrimaryTextAppearance"
+          />
+
+      <ImageView
+          android:id="@+id/repo_visibility_imageview"
+          android:layout_width="0dp"
+          android:layout_height="24dp"
+          android:layout_weight="0.1"
+          app:srcCompat="@drawable/ic_lock_24dp"
+          />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+      <TextView
+          android:id="@+id/repo_language_textview"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_weight="0.3"
+          android:ellipsize="end"
+          android:maxEms="24"
+          android:maxLines="1"
+          android:text="@string/android"
+          android:textAppearance="@style/SecondaryTextAppearance"
+          />
+
+      <TextView
+          android:id="@+id/pr_count_textview"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.25"
+          android:drawableLeft="@drawable/ic_pull_request"
+          android:drawablePadding="4dp"
+          android:ellipsize="end"
+          android:maxLines="1"
+          android:text="@string/pr_count_text"
+          android:textAppearance="@style/AppTheme.TextAppearance.RobotoMedium"
+          android:textColor="@color/primary_light"
+          android:textSize="@dimen/text_size_medium"
+          />
+
+      <TextView
+          android:id="@+id/repo_last_updated_textview"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.45"
+          android:gravity="right"
+          android:maxLines="1"
+          android:text="@string/time"
+          android:textAppearance="@style/SecondaryTextAppearance"
+          />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>
