@@ -24,10 +24,10 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginLeft="@dimen/keyline_1"
-      android:layout_marginRight="72dp"
       android:maxLines="2"
       android:text="@string/list_item_title"
       android:textAppearance="@style/PrimaryTextAppearance"
+      app:layout_marginRightPercent="10%"
       />
 
   <ImageView

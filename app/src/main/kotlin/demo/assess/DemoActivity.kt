@@ -80,10 +80,10 @@ class DemoActivity : AppCompatActivity() {
   }
 
   private fun inflateAndMeasureLayout(layoutRes: Int): Long {
-    container.removeAllViews();
+    container.removeAllViews()
     val now: Long = System.currentTimeMillis()
     val inflatedView = container.inflate(layoutRes)
-    container.addView(inflatedView);
+    container.addView(inflatedView)
     return System.currentTimeMillis() - now
   }
 

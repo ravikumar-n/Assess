@@ -54,7 +54,6 @@
           android:id="@+id/repo_language_textview"
           android:layout_width="0dp"
           android:layout_height="wrap_content"
-          android:layout_alignParentLeft="true"
           android:layout_weight="0.3"
           android:ellipsize="end"
           android:maxEms="24"
