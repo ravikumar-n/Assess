@@ -10,7 +10,6 @@ Compare ViewGroup performance.
 * RelativeLayout
 * PercentRelativeLayout
 * PercentFrameLayout
-* PercentRelativeLayout
 * ConstraintLayout
 
 ---
