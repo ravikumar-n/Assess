@@ -1,16 +1,12 @@
 package demo.assess
 
 import android.os.Bundle
-import android.support.annotation.LayoutRes
 import android.support.v7.app.AppCompatActivity
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
 
 class DemoActivity : AppCompatActivity() {
-  private val SAMPLE_TIMES: Int = 10
+  private val SAMPLE_TIMES: Int = 32
 
   private val FRAMELAYOUT_PAIR: Pair<String, Int> = Pair("FrameLayout", R.layout.layout_fl)
   private val LINEARLAYOUT_PAIR: Pair<String, Int> = Pair("LinearLayout", R.layout.layout_ll)
@@ -30,8 +26,7 @@ class DemoActivity : AppCompatActivity() {
     setContentView(R.layout.activity_demo)
 
     // Dummy to avoid data fluctuations
-    container.inflate(R.layout.layout_fl)
-    container.removeAllViews()
+    inflateAndMeasureLayout(R.layout.layout_fl)
     resultTextView.text = ""
 
     findViewById(R.id.inflate_framelayout_button).setOnClickListener { v ->
@@ -66,8 +61,10 @@ class DemoActivity : AppCompatActivity() {
   }
 
   private fun assessLayout(map: Map<String, Int>) {
+    resultTextView.text = ""
     val resultString: StringBuilder = StringBuilder()
     for ((i, s) in map) {
+      //Runtime.getRuntime().gc()
       val mutableList: MutableList<Long> = arrayListOf()
       for (x in 1..SAMPLE_TIMES) {
         mutableList.add(inflateAndMeasureLayout(s))
@@ -82,12 +79,7 @@ class DemoActivity : AppCompatActivity() {
   private fun inflateAndMeasureLayout(layoutRes: Int): Long {
     container.removeAllViews()
     val now: Long = System.currentTimeMillis()
-    val inflatedView = container.inflate(layoutRes)
-    container.addView(inflatedView)
+    layoutInflater.inflate(layoutRes, container)
     return System.currentTimeMillis() - now
-  }
-
-  fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = false): View {
-    return LayoutInflater.from(context).inflate(layoutRes, this, attachToRoot)
   }
 }
